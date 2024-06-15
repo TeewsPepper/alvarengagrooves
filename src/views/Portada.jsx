@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -19,23 +20,11 @@ const Portada = () => {
     <div className="portada-container">
       <div className="titulo">
         <Link to="/">
-        <h1 className="font-bold opacity-50">
-          <span className="text-white">Al</span>
-          <span className="text-white">
-            va<span className="text-white">ren</span>
-          </span>
-          <span className="text-white">ga</span>
-          <span className="text-white">Groo</span>
-          <span className="text-white">Ve</span>
+        <h1 className="font-bold opacity-50 text-white">
+          AlvarengaGrooves
         </h1>
         </Link>
       </div>
-  
-      {/*   <img
-          className="m-auto"
-          src="src/assets/img/layout-image.jpg"
-          alt="imagen"
-        /> */}
       
       <div className="parrafo text-gray-100 font-bold ">
         <p className="texto-parrafo">WebTour-</p>
@@ -44,7 +33,7 @@ const Portada = () => {
           {month} {year}
         </p>
       </div>
-      <button className="text-white boton animate-pulse"><Link className="boton" to="musica">Comenzar &gt;&gt;</Link></button>
+      <button className="text-white boton animate-pulse"><Link className="boton" to="/musica">Comenzar &gt;&gt;</Link></button>
     </div>
   );
 };

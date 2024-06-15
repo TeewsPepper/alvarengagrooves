@@ -3,22 +3,30 @@
 @tailwind utilities;
 
 @media (max-width: 389px) {
+  .navegacion {
+    padding: .2rem;
+  }
   .navegacion a {
     font-size: 0.6rem;
   }
   .portada-container {
     padding: 0.5rem;
     position: relative;
+    background-image: url("/clave.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.6;
     margin-top: 4rem;
     height: 55vh;
-    margin-bottom: .5rem;
+    margin-bottom: 2.5rem;
   }
   .portada-container .titulo {
     position: absolute;
     font-size: 1.6rem;
-    left: 0.3rem;
-    top: -0rem;
-    padding: 0 0.2rem;
+    left: 0.2rem;
+    top: -3rem;
+    
   }
   .parrafo {
     display: flex;
@@ -32,6 +40,7 @@
   .music-section {
     margin-top: 0.1rem;
   }
+    
   .boton {
     position: absolute;
 
@@ -60,7 +69,8 @@
     display: flex;
     flex-direction: column;
     padding: 0.2rem 1rem;
-    margin-top: -11rem;
+    margin-top: -17rem;
+    margin-bottom: 1rem;
     align-items: center;
     justify-content: center;
     font-size: 0.6rem;
@@ -87,9 +97,7 @@
     flex-direction: column;
     gap: 0.5rem;
   }
-  /* .label {
-    margin-left: 11px;
-  } */
+ 
   .btn-form {
     padding: 0.2rem;
     font-size: 12px;
@@ -104,12 +112,12 @@
     padding: 0.5rem;
     width: 90%;
     margin: auto;
-    margin-top: -14.5rem;
+    margin-top: -17.5rem;
     font-size: 0.6rem;
     background-color: rgb(31 41 55);
     opacity: 0.7;
   }
-  .register-container h1 {
+  .register-container h2 {
     font-size: 1rem;
     text-align: center;
     text-transform: uppercase;
@@ -418,7 +426,7 @@
     position: relative;
     height: 80vh;
     display: grid;
-    background-image: url("/public/clave.png");
+    background-image: url("/clave.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -517,7 +525,7 @@
   }
   .instrument-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     padding: 4rem 15rem;
   }
@@ -569,6 +577,22 @@
     max-width: 65%;
     max-height: 100%;
     object-fit: contain; /* Asegura que la imagen mantenga su aspecto */
+  }
+
+  .blogpost-container {
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+    margin: auto;
+    margin-bottom: 26rem;
+    font-size: 20px;
+    
+  }
+  .blogpost-container img {
+    
+    width: 250px;
+    
   }
 }
 

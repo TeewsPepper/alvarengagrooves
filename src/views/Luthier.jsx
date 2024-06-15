@@ -33,7 +33,7 @@ function Luthier() {
         <p id="instruments">El Taller</p>
       </div>
 
-      <div className="instrument-container bg-slate-600 mb-4 m-auto">
+      <div className="instrument-container  mb-4 m-auto">
         {instruments.map((instrument) => (
           <div
             key={instrument.id}

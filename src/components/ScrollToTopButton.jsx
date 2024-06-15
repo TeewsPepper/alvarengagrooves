@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 
 const ScrollToTopButton = () => {
@@ -29,8 +30,11 @@ const ScrollToTopButton = () => {
 
   return (
     <button
+      aria-label="Ir al inicio"
       onClick={scrollToTop}
       className="scroll-btn text-white p-2 shadow-lg"
+      name="Ir al inicio"
+      
     >
       Ir al inicio
     </button>

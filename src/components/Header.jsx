@@ -1,3 +1,4 @@
+import React from 'react';
 import NavegacionSecundaria from "../components/NavegacionSecundaria"
 import { Link } from "react-router-dom"
 import { useAuth } from '../context/AuthContext';
@@ -10,8 +11,7 @@ const Header = () => {
   return (
     <>
     <NavegacionSecundaria />
-    <div className="navegacion bg-gray-800 text-white">
-        {/* <h1 className="text-4xl uppercase">AG</h1> */}
+    <div className="navegacion bg-gray-800 text-white" data-testid="main-navigation">
         <nav className="flex gap-3 text-xl items-center justify-center">
             <Link to="/" className="text-white  font-bold">Inicio</Link>
             <Link to="musica" className="text-white  font-bold">Música</Link>

@@ -228,7 +228,7 @@ const Register = () => {
 };
 
 export default Register; */
-
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -274,20 +274,14 @@ const Register = () => {
       <div className="portada-container">
         <div className="titulo">
           <Link to="/">
-            <h1 className="font-bold opacity-50">
-              <span className="text-white">Al</span>
-              <span className="text-white">
-                va<span className="text-white">ren</span>
-              </span>
-              <span className="text-white">ga</span>
-              <span className="text-white">Groo</span>
-              <span className="text-white">Ve</span>
+            <h1 className="font-bold opacity-50 text-white">
+              AlvarengaGroove
             </h1>
           </Link>
         </div>
       </div>
       <div className="register-container rounded-md text-white font-semibold">
-        <h1 className="register-title">Registro</h1>
+        <h2 className="register-title">Registro</h2>
         <div className="errores">
           <div>
             {formik.touched.email && formik.errors.email ? (
@@ -322,6 +316,7 @@ const Register = () => {
               onBlur={formik.handleBlur}
               required
             />
+            
           
           
             <label htmlFor="username" className="block font-medium label">
