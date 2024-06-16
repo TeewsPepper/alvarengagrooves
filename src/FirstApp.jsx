@@ -21,8 +21,8 @@ const FirstApp = () => {
               <Route index element={<Portada />} />
               <Route path="musica" element={<Musica />} />
               <Route path="luthier" element={<Luthier />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
+              <Route path="login" element={<Login />} />
+              <Route path="register" element={<Register />} />
               <Route path="blog" element={<ProtectedRoute> <Blog /></ProtectedRoute>}/>
               <Route path="blog/:id"element={ <ProtectedRoute> <BlogPost /> </ProtectedRoute>} />
             </Route>

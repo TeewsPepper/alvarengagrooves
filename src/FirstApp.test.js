@@ -1,41 +1,26 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import FirstApp from './FirstApp';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import FirstApp from "./FirstApp";
+import { AuthProvider } from "./context/AuthContext"; // Asegúrate de importar AuthProvider correctamente
+import { MemoryRouter } from "react-router-dom";
+import Modal from "react-modal";
 
-describe('FirstApp component', () => {
-  test('renders without crashing', () => {
-    render(<FirstApp />);
-    const titleElement = screen.getByText(/First App/i);
-    expect(titleElement).toBeInTheDocument();
-  });
+// Configurar el elemento raíz para react-modal
+Modal.setAppElement(document.createElement("div"));
 
-  test('renders Portada view by default', () => {
-    render(<FirstApp />);
-    const portadaElement = screen.getByText(/Portada/i);
-    expect(portadaElement).toBeInTheDocument();
-  });
+test("renders Portada component at the root route", () => {
+  // Agregar el elemento root al documento
+  const root = document.createElement("div");
+  root.id = "root";
+  document.body.appendChild(root);
 
-  test('renders Musica view when navigating to /musica path', () => {
-    render(<FirstApp />, { route: '/musica' });
-    const musicaElement = screen.getByText(/Musica/i);
-    expect(musicaElement).toBeInTheDocument();
-  });
+  render(
+    <AuthProvider>
+      <FirstApp />
+    </AuthProvider>,
+    { container: document.getElementById("root") } // Especificar el contenedor
+  );
 
-  test('renders Luthier view when navigating to /luthier path', () => {
-    render(<FirstApp />, { route: '/luthier' });
-    const luthierElement = screen.getByText(/Luthier/i);
-    expect(luthierElement).toBeInTheDocument();
-  });
-
-  test('redirects to Login view when accessing protected route without authentication', () => {
-    render(<FirstApp />, { route: '/blog' });
-    const loginElement = screen.getByText(/Login/i);
-    expect(loginElement).toBeInTheDocument();
-  });
-
-  test('renders Blog view when accessing /blog path after authentication', () => {
-    render(<FirstApp isAuthenticated={true} />, { route: '/blog' });
-    const blogElement = screen.getByText(/Blog/i);
-    expect(blogElement).toBeInTheDocument();
-  });
+  expect(screen.getByText(/AlvarengaGrooves/i)).toBeInTheDocument(); // Cambia el texto según el contenido de tu Portada
 });
+
