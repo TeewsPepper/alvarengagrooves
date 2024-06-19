@@ -4,6 +4,9 @@ module.exports = {
     testEnvironment: 'jest-environment-jsdom',
     moduleNameMapper: {
       '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
-    }
+    },
+    collectCoverage: true,
+    coverageDirectory: 'coverage',
+    coverageReporters: ['html', 'text', 'lcov'],
   };
   

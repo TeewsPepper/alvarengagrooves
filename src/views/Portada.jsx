@@ -10,12 +10,15 @@ const Portada = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentDate(new Date());
-    }, 60000); // Cada 1 minuto
+    }, 1000); // Cada 1 minuto
     return () => clearInterval(interval);
   }, []);
 
   const month = currentDate.toLocaleString("default", { month: "long" });
   const year = currentDate.getFullYear();
+  const hours = currentDate.getHours().toString().padStart(2, '0');
+  const minutes = currentDate.getMinutes().toString().padStart(2, '0');
+  const seconds = currentDate.getSeconds().toString().padStart(2, '0');
   return (
     <div className="portada-container">
       <div className="titulo">
@@ -29,8 +32,8 @@ const Portada = () => {
       <div className="parrafo text-gray-100 font-bold ">
         <p className="texto-parrafo">WebTour-</p>
 
-        <p>
-          {month} {year}
+        <p data-testid="date">
+          {month} {year} - {hours}:{minutes}:{seconds}
         </p>
       </div>
       <button className="text-white boton animate-pulse"><Link className="boton" to="/musica">Comenzar &gt;&gt;</Link></button>
