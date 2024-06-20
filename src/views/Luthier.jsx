@@ -29,7 +29,7 @@ function Luthier() {
 
   return (
     <>
-      <div className="title-instruments flex justify-center bg-slate-800 text-center text-gray-100 font-semibold p-4">
+      <div className="luthier-title flex justify-center bg-slate-800 text-center text-gray-100 font-semibold p-4">
         <p id="luthier">El Taller</p>
       </div>
 

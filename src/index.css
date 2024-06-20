@@ -71,13 +71,14 @@ body {
     left: 4.3rem;
     background-color: rgba(37, 43, 51, 0.7);
   }
-  .instrument-container {
+  .luthier-container {
     padding: 0.5rem;
   }
-  .instrument-card {
+  .luthier-card {
     padding: 0.5rem;
     color: black;
-    background-color: rgba(224, 230, 236, 0.7);
+    background-color: rgba(224, 230, 236, 0.6);
+    
   }
 
   .login-container {
@@ -151,6 +152,19 @@ body {
   .register-parrafo {
     text-align: center;
     font-size: .4rem;
+  }
+  .blog-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    color: white;
+    padding: 1rem  1rem;
+    font-size: .7rem;
+  }
+  .blog-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: .1rem;
   }
 
   .footer {
@@ -507,6 +521,19 @@ body {
   }
   .music-section {
     margin-top: 0.1rem;
+  }
+  .blog-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+    padding: 1rem  1rem;
+    font-size: .6rem;
+  }
+  .blog-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: .1rem;
+    margin-bottom: -1rem;
   }
 
   .footer {
