@@ -2,39 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: rgb(31 41 55);
+}
+
+.secondary-nav {
+  background-color: rgb(49, 63, 83);
+}
+
 @media (max-width: 389px) {
+  
   .navegacion {
-    padding: .2rem;
+    padding: .6rem;
+    background-color: rgb(28, 36, 48);
   }
   .navegacion a {
     font-size: 0.6rem;
+    color:white;
+  }
+  .enlace {
+    font-size: .6rem;
+    margin-top: .1rem;
   }
   .portada-container {
-    padding: 0.5rem;
+    
     position: relative;
-    background-image: url("/clave.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    opacity: 0.6;
+    
+    
+    color:rgb(212, 144, 40);
     margin-top: 4rem;
-    height: 55vh;
+    height: 44vh;
     margin-bottom: 2.5rem;
   }
   .portada-container .titulo {
     position: absolute;
+    padding: .1rem .2rem;
+    width: 100vw;
     font-size: 1.6rem;
-    left: 0.2rem;
-    top: -3rem;
-    
+    top: 2rem;
+    background-color: rgb(31 41 55);
   }
   .parrafo {
     display: flex;
     align-items: center;
     position: absolute;
     font-size: 1rem;
-    top: 3rem;
-    left: 2.1rem;
+    top: 5rem;
+    left: 1.4rem;
+    font-size: 12px;
   }
 
   .music-section {
@@ -66,13 +81,12 @@
   }
 
   .login-container {
+    width: 90%;
     display: flex;
     flex-direction: column;
-    padding: 0.2rem 1rem;
-    margin-top: -17rem;
-    margin-bottom: 1rem;
-    align-items: center;
-    justify-content: center;
+    padding: .5rem;
+    margin-top: .2rem;
+    
     font-size: 0.6rem;
     background-color: rgb(31 41 55);
     opacity: 0.7;
@@ -80,6 +94,15 @@
   .login-title {
     font-size: 1rem;
     font: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .login-parrafo {
+    font-size: 0.4rem;
+    margin-bottom: .5rem;
+    text-align: center;
   }
   .errores {
     color: red;
@@ -97,24 +120,24 @@
     flex-direction: column;
     gap: 0.5rem;
   }
- 
+
+
   .btn-form {
-    padding: 0.2rem;
+    padding: 0.4rem;
     font-size: 12px;
     border: 1px solid white;
+    border-radius: 3px;
+    margin-top:1rem;
   }
-  .login-parrafo {
-    font-size: 0.4rem;
-  }
+  
   .register-container {
     display: flex;
     flex-direction: column;
-    padding: 0.5rem;
+    padding: .5rem;
     width: 90%;
     margin: auto;
-    margin-top: -17.5rem;
+    margin-top: .1rem;
     font-size: 0.6rem;
-    background-color: rgb(31 41 55);
     opacity: 0.7;
   }
   .register-container h2 {
@@ -125,9 +148,16 @@
     justify-content: center;
   }
 
+  .register-parrafo {
+    text-align: center;
+    font-size: .4rem;
+  }
+
   .footer {
     font-size: 7px;
     padding: 0.5rem;
+    margin-top: 1rem;
+    background-color: rgb(28, 36, 48);
   }
   .modal {
     position: absolute;
@@ -163,21 +193,32 @@
 }
 
 @media (min-width: 390px) and (max-width: 420px) {
+  .navegacion {
+    padding: .3rem;
+    background-color: rgb(28, 36, 48);
+  }
   .navegacion a {
     font-size: 0.9rem;
     padding: 0.2rem;
   }
+  .enlace {
+    font-size: .9rem;
+    margin-top: .1rem;
+  }
   .portada-container {
-    padding: 0.5rem;
+    
     position: relative;
     margin-top: 1rem;
     height: 55vh;
+    color:rgb(212, 144, 40);
   }
   .portada-container .titulo {
     position: absolute;
-    font-size: 2.9rem;
-    top: 3rem;
-    left: 0.3rem;
+    width: 100vw;
+    font-size: 2.7rem;
+    top: 5rem;
+    left: .5rem;
+   
   }
 
   .parrafo {
@@ -186,7 +227,15 @@
     position: absolute;
     top: 9rem;
     left: 4.8rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+  .boton {
+    position: absolute;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 6rem;
+    margin-left: 4.5rem;
+    font-size: 15px;
   }
   .scroll-btn {
     position: fixed;
@@ -197,35 +246,37 @@
 
   .music-section {
     margin-top: 0.1rem;
+    padding: 1rem 4rem;
   }
-  .boton {
-    position: absolute;
-    padding: 5px;
-    cursor: pointer;
-    margin-top: 7rem;
-    margin-left: 4.5rem;
-    font-size: 15px;
+  #musica-title {
+    font-size: 1.5rem;
   }
 
-  .instrument-container {
+
+  .luthier-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-
     padding: 0.5rem 1rem;
   }
-  .instrument-card {
+
+  #luthier {
+    font-size: 1.5rem ;
+  }
+  .luthier-card {
     display: grid;
     padding: 0.5rem;
     color: black;
     background-color: rgba(224, 230, 236, 0.7);
   }
   .login-container {
+    margin: auto;
     display: flex;
     flex-direction: column;
-
-    margin-top: -16rem;
     align-items: center;
-    justify-content: center;
+    padding: 2rem;
+    width: 98%;
+    margin-top: 3rem;
+   margin-bottom: 3rem;
     font-size: 0.7rem;
     background-color: rgb(31 41 55);
     opacity: 0.7;
@@ -233,44 +284,57 @@
   .login-title {
     font-size: 1.5rem;
     font: bold;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
   }
+  .login-parrafo {
+    margin-bottom: 2rem;
+    margin-top: .2rem;
+  }
+ 
   .formulario {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+    gap: 0.1rem;
+    width: 85%;
   }
   .btn-form {
-    padding: 0.2rem;
+    padding: 0.5rem;
     font-size: 12px;
     border: 1px solid white;
     border-radius: 2.5px;
-    margin-top: 1rem;
+    margin: auto;
+    
+    width: 100%;
+    border-radius: 3px;
   }
 
   .register-container {
-    width: 85%;
+    width: 98%;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.2rem 1rem;
-    margin-top: -18.5rem;
+    
+    margin-top: 3rem;
     font-size: 0.8rem;
     background-color: rgb(31 41 55);
     opacity: 0.7;
-    padding: 1rem;
+    padding: 2rem;
   }
-  .register-container h1 {
-    font-size: 1rem;
+
+ 
+  .register-container h2 {
+    font-size: 1.5rem;
     text-align: center;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
+    margin-bottom: 2rem;
   }
-  .parrafo-register {
+  .register-parrafo {
     font-size: 0.7rem;
+    text-align: center;
   }
 
   .errores {
@@ -287,18 +351,19 @@
   .footer {
     font-size: 12px;
     padding: 0.5rem;
-    margin-top: 15rem;
+    margin-top: .5rem;
+    background-color: rgb(28, 36, 48);
   }
   .modal {
     position: absolute;
-    top: 50%;
+    top: 18rem;
     left: 50%;
     transform: translate(-50%, -50%);
     background: transparent;
     padding: 20px;
     border-radius: 10px;
     width: 100%;
-    max-height: 100%;
+    max-height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -323,36 +388,45 @@
 }
 
 @media (min-width: 421px) and (max-width: 767px) {
+  .navegacion {
+    padding: .3rem;
+    background-color: rgb(28, 36, 48);
+  }
   .navegacion a {
     font-size: 0.9rem;
     padding: 0.2rem;
   }
+
+  .enlace {
+    font-size: 1rem;
+  }
   .portada-container {
     padding: 0.5rem;
     position: relative;
-    height: 25vh;
+    height: 55vh;
+    color:rgb(212, 144, 40);
   }
   .portada-container .titulo {
     position: absolute;
     font-size: 2rem;
     left: 5.7rem;
-    top: 3px;
+    top: .3rem;
   }
   .parrafo {
     display: flex;
     align-items: center;
     position: absolute;
-    font-size: 1rem;
-    top: 4rem;
-    left: 5.7rem;
+    font-size: .8rem;
+    top: 3rem;
+    left: 8rem;
   }
   .boton {
     position: absolute;
-
+    
     padding: 5px;
     cursor: pointer;
-    margin-top: 1.8rem;
-    margin-left: 9rem;
+    margin-top: 1.7rem;
+    margin-left: 5.5rem;
     font-size: 11px;
   }
   .login-container {
@@ -374,24 +448,53 @@
     text-transform: uppercase;
   }
   .formulario {
-    width: 100%;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.1rem;
   }
   .btn-form {
-    padding: 0.2rem;
+    padding: 0.5rem;
     font-size: 12px;
     border: 1px solid white;
     border-radius: 2.5px;
-    margin-top: 1rem;
+    margin-bottom: .4rem;
+    margin: auto;
+    width: 60%;
 
-  } .login-parrafo {
+  } 
+  
+  .login-parrafo {
     font-size: 0.5rem;
     display: flex;
     align-items: center;
   }
+  .register-container {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+    
+    margin-top: .1rem;
+    font-size: 0.8rem;
+    background-color: rgb(31 41 55);
+    opacity: 0.7;
+    padding: 1rem;
+  }
+  .register-title {
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+    margin-bottom: .1rem;
+  }
+  .register-parrafo {
+    font-size: .6rem;
+    text-align: center;
+  }
+  
   .errores {
     color: red;
     display: flex;
@@ -416,6 +519,7 @@
     display: flex;
     justify-content: end;
     padding: .5rem 2rem;
+    background-color: rgb(28, 36, 48);
   }
   .navegacion a {
     font-size: 1rem;
@@ -426,16 +530,13 @@
     position: relative;
     height: 80vh;
     display: grid;
-    background-image: url("/clave.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    color:rgb(212, 144, 40);
     opacity: 0.6;
   }
   .portada-container .titulo {
     position: absolute;
     font-size: 8.4rem;
-    left: 7.5rem;
+    left: 6.5rem;
     top: 6rem;
   }
   .parrafo {
@@ -444,7 +545,7 @@
     position: absolute;
     font-size: 2.3rem;
     top: 18rem;
-    left: 30rem;
+    left: 26rem;
   }
   .boton {
     position: absolute;
@@ -453,7 +554,7 @@
     padding: 0.5rem;
   }
   #musica-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .scroll-btn {
@@ -465,38 +566,44 @@
   .login-title {
     font-size: 1.5rem;
     font: bold;
-    margin-bottom: 0.6rem;
+    margin-bottom: 2rem;
     text-transform: uppercase;
+    text-align: center;
   }
   .login-container {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin-top: -14rem;
+    
+    width: 60%;
+    margin-top: 6rem;
     margin-bottom: 1rem;
-    align-items: center;
-    justify-content: center;
     background-color: rgb(31 41 55);
-    opacity: 0.7;
     padding: 1rem;
   }
+  
+  .login-parrafo {
+    text-align: start;
+    margin-bottom: 2rem;
+  }
+  
+
   .register-container {
-    width: 85%;
+    width:55%;
     margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
     padding: 0.2rem 1rem;
-    margin-top: -16.5rem;
+    margin-top: 2rem;
     margin-bottom: 4.4rem;
     font-size: 0.8rem;
     background-color: rgb(31 41 55);
-    opacity: 0.7;
+    
     padding: 1rem;
   }
-  .title-register {
-    font-size: 1rem;
+  .register-title {
+    font-size: 2rem;
     font: bold;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
   }
   .errores {
     color: red;
@@ -511,26 +618,32 @@
   }
   .formulario {
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    gap: .3rem;
+  }
+  .formulario input {
+    background-color: transparent;
+    color: wheat;
   }
   .btn-form {
-    background-color: rgb(23, 31, 41);
+    border: 1px solid white;
+    width: 40%;
     padding: 0.5rem 1rem;
-    border-radius: 5%;
+    border-radius: 3px;
+    margin: auto;
   }
 
-  #instruments {
+  #luthier {
     font-size: 1.5rem;
     text-transform: uppercase;
   }
-  .instrument-container {
+  .luthier-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
-    padding: 4rem 15rem;
+    padding: .5rem 3rem;
   }
 
-  .instrument-card {
+  .luthier-card {
     display: grid;
     padding: 0.5rem;
     color: white;
@@ -540,6 +653,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     color: white;
+    padding: 1rem  6rem;
+  }
+  .blog-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .footer {

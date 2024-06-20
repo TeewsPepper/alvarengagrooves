@@ -12,14 +12,14 @@ const Header = () => {
     <>
     <NavegacionSecundaria />
     <div className="navegacion bg-gray-800 text-white" data-testid="main-navigation">
-        <nav className="flex gap-3 text-xl items-center justify-center">
+        <nav className="flex gap-3 items-center justify-center">
             <Link to="/" className="text-white  font-bold">Inicio</Link>
             <Link to="musica" className="text-white  font-bold">Música</Link>
             <Link to="luthier" className="text-white  font-bold">Luthier</Link>
             
             <Link to="blog" className="text-white  font-bold">Blog</Link>
           {isAuthenticated ? (
-            <button onClick={logout} className="text-white font-bold">Salir</button>
+            <button onClick={logout} className="enlace text-white font-bold">Salir</button>
           ) : (
             <Link to="login" className="text-white  font-bold">Entrar</Link>
           )}

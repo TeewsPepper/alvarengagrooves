@@ -265,38 +265,17 @@ console.error('Error al iniciar sesión:', error);
 
 return (
 <>
-<div className="portada-container">
-<div className="titulo">
-<Link to="/">
-<h1 className="font-bold text-white opacity-50">
-AlvarengaGrooves
-</h1>
-</Link>
-</div>
-</div>
 
-php
 
   <div className="login-container rounded-md text-white font-semibold m-auto ">
     <h2 className="login-title">Ingresar</h2>
-    <div className="errores">
-      <div>
-        {formik.touched.username && formik.errors.username ? (
-          <div className="error">{formik.errors.username}</div>
-        ) : null}
-      </div>
-      <div>
-        {formik.touched.password && formik.errors.password ? (
-          <div className="error">{formik.errors.password}</div>
-        ) : null}
-      </div>
-    </div>
+    
 
     <form className="formulario" onSubmit={formik.handleSubmit}>
       
         <label htmlFor="username">Usuario:</label>
         <input
-          className="p-1 border text-black border-gray-300 rounded"
+          className="p-2 border text-black border-gray-300 rounded"
           type="text"
           id="username"
           name="username"
@@ -312,7 +291,7 @@ php
           Clave:
         </label>
         <input
-          className="p-1 border text-black border-gray-300 rounded"
+          className="p-2 border text-black border-gray-300 rounded"
           type="password"
           id="password"
           name="password"
@@ -322,19 +301,31 @@ php
           }
           onBlur={formik.handleBlur}
         />
-      
-      <button className="btn-form" type="submit">
-        Entrar
-      </button>
-    </form>
-    <div>
-      <p className="mt-4 login-parrafo">
+      <div>
+      <p className="login-parrafo">
         No eres un usuario registrado? Crea una cuenta{" "}
         <Link to="/register" className="underline text-blue-400">
           Aquí
         </Link>
       </p>
     </div>
+      <button className="btn-form" type="submit">
+        Entrar
+      </button>
+      <div className="errores">
+      <div>
+        {formik.touched.username && formik.errors.username ? (
+          <div className="error">{formik.errors.username}</div>
+        ) : null}
+      </div>
+      <div>
+        {formik.touched.password && formik.errors.password ? (
+          <div className="error">{formik.errors.password}</div>
+        ) : null}
+      </div>
+    </div>
+    </form>
+    
   </div>
 </>
 

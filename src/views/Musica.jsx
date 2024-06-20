@@ -33,7 +33,7 @@ const Musica = () => {
                   alt={audio.title}
                   className="mt-1 m-auto"
                 />
-                <h3 className="text-md text-center font-bold">{audio.title}</h3>
+                <h3 className="text-md mt-3 text-center font-bold">{audio.title}</h3>
                 <audio className="m-auto mt-1 w-full" controls>
                   <source src={audio.src} type="audio/mpeg" />
                   Tu navegador no soporta la reproducción de audio.

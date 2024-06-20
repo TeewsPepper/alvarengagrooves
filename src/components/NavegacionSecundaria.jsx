@@ -4,7 +4,7 @@ import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const NavegacionSecundaria = () => {
   return (
-    <nav className=' text-2xl flex gap-2 justify-center lg:p-2' id="inicio" data-testid="nav-navegacion">
+    <nav className='secondary-nav text-2xl flex gap-2 justify-center lg:p-2' id="inicio" data-testid="nav-navegacion">
       <a href="https://www.facebook.com/alvaro.pacello" target='_blank' rel="noopener noreferrer" data-testid="icon-facebook">
         <FontAwesomeIcon icon={faFacebook} />
       </a>

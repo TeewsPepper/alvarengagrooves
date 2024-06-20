@@ -402,16 +402,7 @@
 <a name='L337'></a><a href='#L337'>337</a>
 <a name='L338'></a><a href='#L338'>338</a>
 <a name='L339'></a><a href='#L339'>339</a>
-<a name='L340'></a><a href='#L340'>340</a>
-<a name='L341'></a><a href='#L341'>341</a>
-<a name='L342'></a><a href='#L342'>342</a>
-<a name='L343'></a><a href='#L343'>343</a>
-<a name='L344'></a><a href='#L344'>344</a>
-<a name='L345'></a><a href='#L345'>345</a>
-<a name='L346'></a><a href='#L346'>346</a>
-<a name='L347'></a><a href='#L347'>347</a>
-<a name='L348'></a><a href='#L348'>348</a>
-<a name='L349'></a><a href='#L349'>349</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L340'></a><a href='#L340'>340</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -694,27 +685,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -732,6 +702,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1026,38 +1008,17 @@ console.error('Error al iniciar sesión:', error);
 &nbsp;
 return (
 &lt;&gt;
-&lt;div className="portada-container"&gt;
-&lt;div className="titulo"&gt;
-&lt;Link to="/"&gt;
-&lt;h1 className="font-bold text-white opacity-50"&gt;
-AlvarengaGrooves
-&lt;/h1&gt;
-&lt;/Link&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 &nbsp;
-php
 &nbsp;
   &lt;div className="login-container rounded-md text-white font-semibold m-auto "&gt;
     &lt;h2 className="login-title"&gt;Ingresar&lt;/h2&gt;
-    &lt;div className="errores"&gt;
-      &lt;div&gt;
-        {formik.touched.username &amp;&amp; formik.errors.username ? (
-          &lt;div className="error"&gt;{formik.errors.username}&lt;/div&gt;
-        ) : null}
-      &lt;/div&gt;
-      &lt;div&gt;
-        {formik.touched.password &amp;&amp; formik.errors.password ? (
-          &lt;div className="error"&gt;{formik.errors.password}&lt;/div&gt;
-        ) : null}
-      &lt;/div&gt;
-    &lt;/div&gt;
+    
 &nbsp;
     &lt;form className="formulario" onSubmit={formik.handleSubmit}&gt;
       
         &lt;label htmlFor="username"&gt;Usuario:&lt;/label&gt;
         &lt;input
-          className="p-1 border text-black border-gray-300 rounded"
+          className="p-2 border text-black border-gray-300 rounded"
           type="text"
           id="username"
           name="username"
@@ -1073,7 +1034,7 @@ php
           Clave:
         &lt;/label&gt;
         &lt;input
-          className="p-1 border text-black border-gray-300 rounded"
+          className="p-2 border text-black border-gray-300 rounded"
           type="password"
           id="password"
           name="password"
@@ -1083,19 +1044,31 @@ php
           }
           onBlur={formik.handleBlur}
         /&gt;
-      
-      &lt;button className="btn-form" type="submit"&gt;
-        Entrar
-      &lt;/button&gt;
-    &lt;/form&gt;
-    &lt;div&gt;
-      &lt;p className="mt-4 login-parrafo"&gt;
+      &lt;div&gt;
+      &lt;p className="login-parrafo"&gt;
         No eres un usuario registrado? Crea una cuenta{" "}
         &lt;Link to="/register" className="underline text-blue-400"&gt;
           Aquí
         &lt;/Link&gt;
       &lt;/p&gt;
     &lt;/div&gt;
+      &lt;button className="btn-form" type="submit"&gt;
+        Entrar
+      &lt;/button&gt;
+      &lt;div className="errores"&gt;
+      &lt;div&gt;
+        {formik.touched.username &amp;&amp; formik.errors.username ? (
+          &lt;div className="error"&gt;{formik.errors.username}&lt;/div&gt;
+        ) : null}
+      &lt;/div&gt;
+      &lt;div&gt;
+        {formik.touched.password &amp;&amp; formik.errors.password ? (
+          &lt;div className="error"&gt;{formik.errors.password}&lt;/div&gt;
+        ) : null}
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+    
   &lt;/div&gt;
 &lt;/&gt;
 &nbsp;
@@ -1114,7 +1087,7 @@ export default Login;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-06-19T06:00:08.801Z
+                at 2024-06-20T09:20:10.048Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

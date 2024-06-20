@@ -6,7 +6,7 @@ import blogPosts from "../data/blogData";
 const Blog = () => {
   return (
     <>
-      <h1 className='text-white font-bold text-4xl text-center mt-3 mb-5'>Blog</h1>
+      <h1 className='blog-title text-white font-bold  text-center '>Blog</h1>
       <div className="blog-container" data-testid="blog">
         {blogPosts.map((post) => (
           <div key={post.id} className="blog-post mb-8 p-4 rounded shadow-lg text-white" data-testid="blog-post">

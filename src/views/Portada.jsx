@@ -23,7 +23,7 @@ const Portada = () => {
     <div className="portada-container">
       <div className="titulo">
         <Link to="/">
-        <h1 className="font-bold opacity-50 text-white">
+        <h1 className="font-bold opacity-50">
           AlvarengaGrooves
         </h1>
         </Link>
@@ -36,7 +36,7 @@ const Portada = () => {
           {month} {year} - {hours}:{minutes}:{seconds}
         </p>
       </div>
-      <button className="text-white boton animate-pulse"><Link className="boton" to="/musica">Comenzar &gt;&gt;</Link></button>
+      <button className="text-white boton animate-pulse"><Link className="boton" to="/musica">Comenzar&gt;&gt;</Link></button>
     </div>
   );
 };

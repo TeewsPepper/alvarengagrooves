@@ -42,7 +42,7 @@ const Register = () => {
 
   return (
     <>
-      <div className="portada-container">
+      {/* <div className="portada-container">
         <div className="titulo">
           <Link to="/">
             <h1 className="font-bold opacity-50 text-white">
@@ -50,29 +50,13 @@ const Register = () => {
             </h1>
           </Link>
         </div>
-      </div>
+      </div> */}
       <div className="register-container rounded-md text-white font-semibold">
         <h2 className="register-title">Registro</h2>
-        <div className="errores">
-          <div>
-            {formik.touched.email && formik.errors.email ? (
-              <div className="error">{formik.errors.email}</div>
-            ) : null}
-          </div>
-          <div>
-            {formik.touched.username && formik.errors.username ? (
-              <div className="error">{formik.errors.username}</div>
-            ) : null}
-          </div>
-          <div>
-            {formik.touched.password && formik.errors.password ? (
-              <div className="error">{formik.errors.password}</div>
-            ) : null}
-          </div>
-        </div>
+        
         <form className="formulario" onSubmit={formik.handleSubmit}>
           
-            <label htmlFor="email" className="font-medium">
+            <label htmlFor="email" className=" font-medium">
               Email:
             </label>
             <input
@@ -90,7 +74,7 @@ const Register = () => {
             
           
           
-            <label htmlFor="username" className="block font-medium label">
+            <label htmlFor="username" className=" font-medium label">
               Nombre:
             </label>
             <input
@@ -107,7 +91,7 @@ const Register = () => {
             />
           
           
-            <label htmlFor="password" className="block font-medium label">
+            <label htmlFor="password" className=" font-medium label">
               Clave:
             </label>
             <input
@@ -123,19 +107,38 @@ const Register = () => {
               autoComplete="off"
               required
             />
-          
-          <button type="submit" className="btn-form">
-            Enviar
-          </button>
-        </form>
-        <div>
-          <p className="mt-4 parrafo-register">
+             <div>
+          <p className="register-parrafo">
             ¿Ya tienes una cuenta? Ingresa{" "}
             <Link to="/login" className="underline text-blue-400">
               Aquí
             </Link>
           </p>
         </div>
+            <div className="errores">
+          <div>
+            {formik.touched.email && formik.errors.email ? (
+              <div className="error">{formik.errors.email}</div>
+            ) : null}
+          </div>
+          <div>
+            {formik.touched.username && formik.errors.username ? (
+              <div className="error">{formik.errors.username}</div>
+            ) : null}
+          </div>
+          <div>
+            {formik.touched.password && formik.errors.password ? (
+              <div className="error">{formik.errors.password}</div>
+            ) : null}
+          </div>
+        </div>
+       
+          <button type="submit" className="btn-form">
+            Enviar
+          </button>
+          
+        </form>
+        
       </div>
     </>
   );

@@ -30,14 +30,14 @@ function Luthier() {
   return (
     <>
       <div className="title-instruments flex justify-center bg-slate-800 text-center text-gray-100 font-semibold p-4">
-        <p id="instruments">El Taller</p>
+        <p id="luthier">El Taller</p>
       </div>
 
-      <div className="instrument-container  mb-4 m-auto">
+      <div className="luthier-container  mb-4 m-auto">
         {instruments.map((instrument) => (
           <div
             key={instrument.id}
-            className="instrument-card bg-gray-800 p-2 m-4 rounded-md "
+            className="luthier-card bg-gray-800 p-2 m-4 rounded-md "
           >
             <h2 className="text-xl font-bold mb-2">{instrument.title}</h2>
             <img

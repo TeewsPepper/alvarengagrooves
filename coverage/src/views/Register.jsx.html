@@ -207,7 +207,10 @@
 <a name='L142'></a><a href='#L142'>142</a>
 <a name='L143'></a><a href='#L143'>143</a>
 <a name='L144'></a><a href='#L144'>144</a>
-<a name='L145'></a><a href='#L145'>145</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -275,22 +278,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -327,6 +314,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -395,7 +401,7 @@ const Register = () =&gt; {
 &nbsp;
   return (
     &lt;&gt;
-      &lt;div className="portada-container"&gt;
+      {/* &lt;div className="portada-container"&gt;
         &lt;div className="titulo"&gt;
           &lt;Link to="/"&gt;
             &lt;h1 className="font-bold opacity-50 text-white"&gt;
@@ -403,29 +409,13 @@ const Register = () =&gt; {
             &lt;/h1&gt;
           &lt;/Link&gt;
         &lt;/div&gt;
-      &lt;/div&gt;
+      &lt;/div&gt; */}
       &lt;div className="register-container rounded-md text-white font-semibold"&gt;
         &lt;h2 className="register-title"&gt;Registro&lt;/h2&gt;
-        &lt;div className="errores"&gt;
-          &lt;div&gt;
-            {formik.touched.email &amp;&amp; formik.errors.email ? (
-              &lt;div className="error"&gt;{formik.errors.email}&lt;/div&gt;
-            ) : null}
-          &lt;/div&gt;
-          &lt;div&gt;
-            {formik.touched.username &amp;&amp; formik.errors.username ? (
-              &lt;div className="error"&gt;{formik.errors.username}&lt;/div&gt;
-            ) : null}
-          &lt;/div&gt;
-          &lt;div&gt;
-            {formik.touched.password &amp;&amp; formik.errors.password ? (
-              &lt;div className="error"&gt;{formik.errors.password}&lt;/div&gt;
-            ) : null}
-          &lt;/div&gt;
-        &lt;/div&gt;
+        
         &lt;form className="formulario" onSubmit={formik.handleSubmit}&gt;
           
-            &lt;label htmlFor="email" className="font-medium"&gt;
+            &lt;label htmlFor="email" className=" font-medium"&gt;
               Email:
             &lt;/label&gt;
             &lt;input
@@ -443,7 +433,7 @@ const Register = () =&gt; {
             
           
           
-            &lt;label htmlFor="username" className="block font-medium label"&gt;
+            &lt;label htmlFor="username" className=" font-medium label"&gt;
               Nombre:
             &lt;/label&gt;
             &lt;input
@@ -460,7 +450,7 @@ const Register = () =&gt; {
             /&gt;
           
           
-            &lt;label htmlFor="password" className="block font-medium label"&gt;
+            &lt;label htmlFor="password" className=" font-medium label"&gt;
               Clave:
             &lt;/label&gt;
             &lt;input
@@ -476,19 +466,38 @@ const Register = () =&gt; {
               autoComplete="off"
               required
             /&gt;
-          
-          &lt;button type="submit" className="btn-form"&gt;
-            Enviar
-          &lt;/button&gt;
-        &lt;/form&gt;
-        &lt;div&gt;
-          &lt;p className="mt-4 parrafo-register"&gt;
+             &lt;div&gt;
+          &lt;p className="register-parrafo"&gt;
             ¿Ya tienes una cuenta? Ingresa{" "}
             &lt;Link to="/login" className="underline text-blue-400"&gt;
               Aquí
             &lt;/Link&gt;
           &lt;/p&gt;
         &lt;/div&gt;
+            &lt;div className="errores"&gt;
+          &lt;div&gt;
+            {formik.touched.email &amp;&amp; formik.errors.email ? (
+              &lt;div className="error"&gt;{formik.errors.email}&lt;/div&gt;
+            ) : null}
+          &lt;/div&gt;
+          &lt;div&gt;
+            {formik.touched.username &amp;&amp; formik.errors.username ? (
+              &lt;div className="error"&gt;{formik.errors.username}&lt;/div&gt;
+            ) : null}
+          &lt;/div&gt;
+          &lt;div&gt;
+            {formik.touched.password &amp;&amp; formik.errors.password ? (
+              &lt;div className="error"&gt;{formik.errors.password}&lt;/div&gt;
+            ) : null}
+          &lt;/div&gt;
+        &lt;/div&gt;
+       
+          &lt;button type="submit" className="btn-form"&gt;
+            Enviar
+          &lt;/button&gt;
+          
+        &lt;/form&gt;
+        
       &lt;/div&gt;
     &lt;/&gt;
   );
@@ -502,7 +511,7 @@ export default Register;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-06-19T06:00:08.759Z
+                at 2024-06-20T09:20:10.001Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
