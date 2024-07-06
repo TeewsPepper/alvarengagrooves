@@ -3,7 +3,7 @@ const blogPosts = [
     {
       id: 1,
       title: "El taller básico",
-      description: "Estos son los elementos que considero indispensables a la hora de montar un taller",
+      description: "Estos son los elementos básicos para montar tu taller",
       content: "Este es el contenido completo de mi primer post. Aquí puedes escribir tu artículo.",
       image: "/assets/instruments/post1.jpg"
     },

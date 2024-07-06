@@ -91,9 +91,7 @@ describe('Portada Component', () => {
     expect(titleElement).toBeInTheDocument();
     expect(titleElement).toHaveTextContent('AlvarengaGrooves');
 
-    // Comprobar que el título está dentro de un enlace con el atributo 'to="/"'
-    const linkElement = screen.getByRole('link', { name: /AlvarengaGrooves/i });
-    expect(linkElement).toHaveAttribute('href', '/');
+    
   });
 
   test('renders the current month and year', () => {

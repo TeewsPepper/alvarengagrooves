@@ -21,22 +21,22 @@ const Portada = () => {
   const seconds = currentDate.getSeconds().toString().padStart(2, '0');
   return (
     <div className="portada-container">
-      <div className="titulo">
-        <Link to="/">
-        <h1 className="font-bold opacity-50">
+      <div>
+        
+        <h1>
           AlvarengaGrooves
         </h1>
-        </Link>
+        
       </div>
       
-      <div className="parrafo text-gray-100 font-bold ">
-        <p className="texto-parrafo">WebTour-</p>
+      <div className="parrafo">
+        <p>WebTour-</p>
 
         <p data-testid="date">
           {month} {year} - {hours}:{minutes}:{seconds}
         </p>
       </div>
-      <button className="text-white boton animate-pulse"><Link className="boton" to="/musica">Comenzar&gt;&gt;</Link></button>
+      <button className="boton animate-pulse"><Link className='boton'  to="/musica">Comenzar&gt;&gt;</Link></button>
     </div>
   );
 };

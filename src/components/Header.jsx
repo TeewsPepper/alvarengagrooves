@@ -11,17 +11,17 @@ const Header = () => {
   return (
     <>
     <NavegacionSecundaria />
-    <div className="navegacion bg-gray-800 text-white" data-testid="main-navigation">
-        <nav className="flex gap-3 items-center justify-center">
-            <Link to="/" className="text-white  font-bold">Inicio</Link>
-            <Link to="musica" className="text-white  font-bold">Música</Link>
-            <Link to="luthier" className="text-white  font-bold">Luthier</Link>
+    <div>
+        <nav className="navegacion" data-testid="main-navigation">
+            <Link to="/" aria-label="Esta es la página inicial">Inicio</Link>
+            <Link to="musica" aria-label="Aquí puedes escuchar los discos de Alvaro">Música</Link>
+            <Link to="luthier" aria-label="Esta es la sección de construcción de instrumentos">Luthier</Link>
             
-            <Link to="blog" className="text-white  font-bold">Blog</Link>
+            <Link to="blog" aria-label="El Blog de Alvaro">Blog</Link>
           {isAuthenticated ? (
-            <button onClick={logout} className="enlace text-white font-bold">Salir</button>
+            <button onClick={logout} className='enlace' >Salir</button>
           ) : (
-            <Link to="login" className="text-white  font-bold">Entrar</Link>
+            <Link to="login" data-testid="login-link" aria-label="En este enlace puedes iniciar tu sesión">Entrar</Link>
           )}
         </nav>
     </div>

@@ -51,8 +51,8 @@ const Register = () => {
           </Link>
         </div>
       </div> */}
-      <div className="register-container rounded-md text-white font-semibold">
-        <h2 className="register-title">Registro</h2>
+      <div className="register-container">
+        <h3>Registro</h3>
         
         <form className="formulario" onSubmit={formik.handleSubmit}>
           
@@ -63,7 +63,6 @@ const Register = () => {
               type="email"
               id="email"
               name="email"
-              className="p-2 border text-black border-gray-300 rounded"
               value={formik.values.email}
               onChange={(e) =>
                 formik.setFieldValue("email", sanitizeInput(e.target.value))
@@ -74,14 +73,13 @@ const Register = () => {
             
           
           
-            <label htmlFor="username" className=" font-medium label">
+            <label htmlFor="username">
               Nombre:
             </label>
             <input
               type="text"
               id="username"
               name="username"
-              className="p-2 border text-black border-gray-300 rounded"
               value={formik.values.username}
               onChange={(e) =>
                 formik.setFieldValue("username", sanitizeInput(e.target.value))
@@ -91,14 +89,13 @@ const Register = () => {
             />
           
           
-            <label htmlFor="password" className=" font-medium label">
+            <label htmlFor="password">
               Clave:
             </label>
             <input
               type="password"
               id="password"
               name="password"
-              className="p-2 border text-black border-gray-300 rounded"
               value={formik.values.password}
               onChange={(e) =>
                 formik.setFieldValue("password", sanitizeInput(e.target.value))
@@ -110,7 +107,7 @@ const Register = () => {
              <div>
           <p className="register-parrafo">
             ¿Ya tienes una cuenta? Ingresa{" "}
-            <Link to="/login" className="underline text-blue-400">
+            <Link to="/login">
               Aquí
             </Link>
           </p>

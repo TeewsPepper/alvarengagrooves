@@ -16,25 +16,26 @@ const Musica = () => {
 
   return (
     <>
-      <div className="music-section flex justify-center bg-slate-800 text-center text-gray-100 font-semibold p-4">
+      <div>
         <p id="musica-title">"El Ojo", mi primer disco solista.</p>
       </div>
 
-      <div className="  grid grid-cols-1 gap-2 p-8 mb-4 m-auto">
+      <div className="musica-container">
         {columns.map((column, columnIndex) => (
           <div
             key={columnIndex}
-            className="col-span-1 grid gap-2 lg:w-1/5 m-auto"
+            className="musica-contenido"
           >
             {column.map((audio) => (
-              <div key={audio.id} className=" text-white underline">
+              <div key={audio.id}>
                 <img
                   src={audio.image}
                   alt={audio.title}
-                  className="mt-1 m-auto"
+                  loading='lazy'
+                  className="imagen"
                 />
-                <h3 className="text-md mt-3 text-center font-bold">{audio.title}</h3>
-                <audio className="m-auto mt-1 w-full" controls>
+                <h3>{audio.title}</h3>
+                <audio  controls>
                   <source src={audio.src} type="audio/mpeg" />
                   Tu navegador no soporta la reproducción de audio.
                 </audio>
@@ -42,7 +43,7 @@ const Musica = () => {
             ))}
           </div>
         ))}
-        <button className="text-gray-100 font-bold text-sm text-center mt-5 underline">
+        <button className="musica-boton">
           <Link to="/luthier">Continuar&gt;&gt;</Link>
         </button>
       </div>

@@ -32,12 +32,10 @@ const ScrollToTopButton = () => {
     <button
       aria-label="Ir al inicio"
       onClick={scrollToTop}
-      className="scroll-btn text-white p-2 shadow-lg"
+      className="scroll-btn"
       name="Ir al inicio"
       
-    >
-      Ir al inicio
-    </button>
+    >Ir al inicio</button>
   );
 };
 
