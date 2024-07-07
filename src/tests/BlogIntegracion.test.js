@@ -1,34 +1,3 @@
-
-/* import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import Blog from '../views/Blog';
-import { AuthProvider } from '../context/AuthContext';
-
-describe('Blog Content Integration Test', () => {
-  test('renders blog posts correctly', () => {
-    render(
-      <AuthProvider>
-        <MemoryRouter initialEntries={['/blog']}>
-          <Routes>
-            <Route path="/blog" element={<Blog />} />
-          </Routes>
-        </MemoryRouter>
-      </AuthProvider>
-    );
-
-    const blogPosts = screen.getAllByTestId('blog-post');
-    expect(blogPosts.length).toBeGreaterThan(0);
-
-    blogPosts.forEach((post) => {
-      expect(post).toBeInTheDocument();
-      expect(post.querySelector('h2')).toBeInTheDocument();
-      expect(post.querySelector('p')).toBeInTheDocument();
-    });
-  });
-}); */
-// src/components/__tests__/Blog.integration.test.js
-// src/__tests__/BlogIntegracion.test.js
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';

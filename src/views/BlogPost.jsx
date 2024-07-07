@@ -17,7 +17,7 @@ const BlogPost = () => {
       <div className="blopost-container">
         <p className="blogpost-description">{post.description}</p>
         <div className="blogpost-container">
-          <img src={post.image} alt={post.title} />
+          <img loading="lazy" src={post.image} alt={post.title} />
           <div className="blogpost-content">{post.content}</div>
         </div>
       </div>

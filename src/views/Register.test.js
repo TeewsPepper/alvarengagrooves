@@ -1,23 +1,4 @@
-/* import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import Register from './Register';
-import { AuthProvider } from '../context/AuthContext';
 
-const renderWithRouter = (ui, { route = '/' } = {}) => {
-  window.history.pushState({}, 'Test page', route);
-
-  return render(ui, { wrapper: MemoryRouter });
-};
-
-test('renders Register component', () => {
-  renderWithRouter(
-    <AuthProvider>
-      <Register />
-    </AuthProvider>
-  );
-  expect(screen.getByText(/Registro/i)).toBeInTheDocument();
-}); */
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';

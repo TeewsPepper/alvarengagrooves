@@ -41,6 +41,7 @@ function Luthier() {
           >
             <h3>{instrument.title}</h3>
             <img
+            loading='lazy'
               src={instrument.image}
               alt={instrument.title}
               className="mb-2"

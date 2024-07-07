@@ -42,15 +42,7 @@ const Register = () => {
 
   return (
     <>
-      {/* <div className="portada-container">
-        <div className="titulo">
-          <Link to="/">
-            <h1 className="font-bold opacity-50 text-white">
-              AlvarengaGroove
-            </h1>
-          </Link>
-        </div>
-      </div> */}
+ 
       <div className="register-container">
         <h3>Registro</h3>
         
