@@ -2,7 +2,6 @@
   "name": "alvarenga-grooves",
   "private": true,
   "version": "0.0.0",
-  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,7 +10,9 @@
     "test": "jest --config jest.config.cjs"
   },
   "dependencies": {
+    "compression": "^1.7.4",
     "dompurify": "^3.1.5",
+    "express": "^4.19.2",
     "formik": "^2.4.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
